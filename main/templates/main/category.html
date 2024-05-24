@@ -211,7 +211,7 @@
 			<a href="{% url 'image-detail' slug1=category.slug slug2=image.slug %}"><button type="button" class="btn btn-sm btn-outline-secondary">Image Details Button</button></a>
                 </div>
 		<small class="text-body-secondary">
-			        <small class="text-body-secondary">{{ image.date_created }}</small>
+			        <small class="text-body-secondary">{{ image.date_created | timesince}} ago</small>
 		</small>
                </div>
             </div>
