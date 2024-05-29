@@ -49,8 +49,8 @@ class Image(models.Model):
     #Utility Variables
     uniqueId = models.CharField(null=True, blank=True, max_length=100)
     slug = models.SlugField(max_length=500, unique=True, blank=True, null=True)
-    date_created = models.TimeField(blank=True, null=True)
-    last_updated = models.TimeField(blank=True, null=True)
+    date_created = models.DateTimeField(auto_now_add=True, null=True)
+    last_updated = models.DateTimeField(auto_now=True, null=True)
     
 
     def __str__(self):

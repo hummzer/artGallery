@@ -84,20 +84,23 @@
       <div class="row">
 
         <div class="col-lg-6">
-          <img class="img-fluid" src="{{image.tallImage.url}}" alt="{{image.altText}}">
+          <img src="{{image.tallImage.url}}" alt="{{image.altText}}">
+	  <p>{{ image.tallImage.url }}</p> <!-- Add this line for debugging -->
         </div>
 
         <div class="col-lg-6">
 
           <div class="row">
             <div class="col-lg-12">
-              <img class="img-fluid" src="{{image.landImage.url}}" alt="{{image.altText}}">
+              <img src="{{image.landImage.url}}" alt="{{image.altText}}">
+	      <p>{{ image.landImage.url }}</p> <!-- Add this line for debugging -->
             </div>
           </div>
           <br>
           <div class="row">
             <div class="col-lg-12">
-              <img class="img-fluid" src="{{image.squareImage.url}}" alt="{{image.altText}}">
+              <img src="{{image.squareImage.url}}" alt="{{image.altText}}">
+	      <p>{{ image.squareImage.url }}</p> <!-- Add this line for debugging -->
             </div>
           </div>
 
