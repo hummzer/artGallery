@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import *
 
 # Create your views here.
@@ -24,10 +24,10 @@ def categoryPage(request, slug):
 
 def imageDetailPage(request, slug1, slug2):
     category = Category.objects.get(slug=slug1)
-    images = Image.objects.get(slug=slug2)
+    image = get_object_or_404(Image, slug=slug2)
 
     context = {}
-    context['images'] = images
+    context['image'] = image
     context['category'] = category
 
     return render(request, 'main/image.html', context)
