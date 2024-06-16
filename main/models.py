@@ -39,9 +39,9 @@ class Image(models.Model):
     hashtags = models.CharField(null=True, blank=True, max_length=300)
 
     ##ImageFields
-    squareImage = ResizedImageField(size=[1000, 1000], crop=['middle', 'center'], default='default_square.jpg', upload_to='squareimages')
-    landImage = ResizedImageField(size=[2878, 1618], crop=['middle', 'center'], default='default_land.jpg', upload_to='landimages')
-    tallImage = ResizedImageField(size=[1618, 2878], crop=['middle', 'center'], default='default_tall.jpg', upload_to='tallimages')
+    squareImage = ResizedImageField(size=[700, 700], crop=['middle', 'center'], default='default_square.jpg', upload_to='squareimages')
+    landImage = ResizedImageField(size=[700, 300], crop=['middle', 'center'], default='default_land.jpg', upload_to='landimages')
+    tallImage = ResizedImageField(size=[600, 1024], crop=['middle', 'center'], default='default_tall.jpg', upload_to='tallimages')
 
     ##Related Fields
     category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.CASCADE)
