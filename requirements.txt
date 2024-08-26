@@ -12,4 +12,4 @@ requests==2.26.0
 sqlparse==0.4.2
 urllib3==1.26.7
 uuid==1.30
-
+libpq-dev
